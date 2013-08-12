@@ -1,0 +1,34 @@
+Exit
+-----
+<?php
+exit;
+exit();
+exit('Die!');
+die;
+die();
+die('Exit!');
+-----
+array(
+    0: PHPParser\Node\Expression\ExitExpression(
+        expr: null
+    )
+    1: PHPParser\Node\Expression\ExitExpression(
+        expr: null
+    )
+    2: PHPParser\Node\Expression\ExitExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: Die!
+        )
+    )
+    3: PHPParser\Node\Expression\ExitExpression(
+        expr: null
+    )
+    4: PHPParser\Node\Expression\ExitExpression(
+        expr: null
+    )
+    5: PHPParser\Node\Expression\ExitExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: Exit!
+        )
+    )
+)

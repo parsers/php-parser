@@ -1,0 +1,38 @@
+PHP 4 style declarations
+-----
+<?php
+
+class A {
+    var $foo;
+    function bar() {}
+}
+-----
+array(
+    0: PHPParser\Node\Statement\ClassStatement(
+        type: 0
+        extends: null
+        implements: array(
+        )
+        Statements: array(
+            0: PHPParser\Node\Statement\PropertyStatement(
+                type: 1
+                props: array(
+                    0: PHPParser\Node\Statement\PropertyPropertyStatement(
+                        name: foo
+                        default: null
+                    )
+                )
+            )
+            1: PHPParser\Node\Statement\ClassMethodStatement(
+                type: 1
+                byRef: false
+                params: array(
+                )
+                Statements: array(
+                )
+                name: bar
+            )
+        )
+        name: A
+    )
+)

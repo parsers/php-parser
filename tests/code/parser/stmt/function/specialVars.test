@@ -1,0 +1,50 @@
+Special function variables
+-----
+<?php
+
+function a() {
+    global $a, ${'b'}, $$c;
+    static $c, $d = 'e';
+}
+-----
+array(
+    0: PHPParser\Node\Statement\FunctionStatement(
+        byRef: false
+        params: array(
+        )
+        Statements: array(
+            0: PHPParser\Node\Statement\GlobalStatement(
+                vars: array(
+                    0: PHPParser\Node\Expression\VariableExpression(
+                        name: a
+                    )
+                    1: PHPParser\Node\Expression\VariableExpression(
+                        name: PHPParser\Node\Scalar\StringScalar(
+                            value: b
+                        )
+                    )
+                    2: PHPParser\Node\Expression\VariableExpression(
+                        name: PHPParser\Node\Expression\VariableExpression(
+                            name: c
+                        )
+                    )
+                )
+            )
+            1: PHPParser\Node\Statement\StaticStatement(
+                vars: array(
+                    0: PHPParser\Node\Statement\StaticVarStatement(
+                        name: c
+                        default: null
+                    )
+                    1: PHPParser\Node\Statement\StaticVarStatement(
+                        name: d
+                        default: PHPParser\Node\Scalar\StringScalar(
+                            value: e
+                        )
+                    )
+                )
+            )
+        )
+        name: a
+    )
+)

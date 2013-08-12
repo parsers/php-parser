@@ -1,0 +1,117 @@
+Function calls
+-----
+<?php
+
+// function name variations
+a();
+$a();
+${'a'}();
+$$a();
+$$$a();
+$a['b']();
+$a{'b'}();
+$a->b['c']();
+
+// array dereferencing
+a()['b'];
+-----
+array(
+    0: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: a
+            )
+        )
+        args: array(
+        )
+    )
+    1: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        args: array(
+        )
+    )
+    2: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: PHPParser\Node\Scalar\StringScalar(
+                value: a
+            )
+        )
+        args: array(
+        )
+    )
+    3: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+        args: array(
+        )
+    )
+    4: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: PHPParser\Node\Expression\VariableExpression(
+                name: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+            )
+        )
+        args: array(
+        )
+    )
+    5: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: b
+            )
+        )
+        args: array(
+        )
+    )
+    6: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: b
+            )
+        )
+        args: array(
+        )
+    )
+    7: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\PropertyFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                name: b
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: c
+            )
+        )
+        args: array(
+        )
+    )
+    8: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\FuncCallExpression(
+            name: PHPParser\Node\NameNode(
+                parts: array(
+                    0: a
+                )
+            )
+            args: array(
+            )
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: b
+        )
+    )
+)

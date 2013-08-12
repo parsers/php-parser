@@ -1,0 +1,139 @@
+Array definitions
+-----
+<?php
+
+array();
+array('a');
+array('a', );
+array('a', 'b');
+array('a', &$b, 'c' => 'd', 'e' => &$f);
+
+// short array syntax
+[];
+[1, 2, 3];
+['a' => 'b'];
+-----
+array(
+    0: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+        )
+    )
+    1: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: a
+                )
+                byRef: false
+            )
+        )
+    )
+    2: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: a
+                )
+                byRef: false
+            )
+        )
+    )
+    3: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: a
+                )
+                byRef: false
+            )
+            1: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: b
+                )
+                byRef: false
+            )
+        )
+    )
+    4: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: a
+                )
+                byRef: false
+            )
+            1: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                byRef: true
+            )
+            2: PHPParser\Node\Expression\ArrayItemExpression(
+                key: PHPParser\Node\Scalar\StringScalar(
+                    value: c
+                )
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: d
+                )
+                byRef: false
+            )
+            3: PHPParser\Node\Expression\ArrayItemExpression(
+                key: PHPParser\Node\Scalar\StringScalar(
+                    value: e
+                )
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: f
+                )
+                byRef: true
+            )
+        )
+    )
+    5: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+        )
+    )
+    6: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 1
+                )
+                byRef: false
+            )
+            1: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 2
+                )
+                byRef: false
+            )
+            2: PHPParser\Node\Expression\ArrayItemExpression(
+                key: null
+                value: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 3
+                )
+                byRef: false
+            )
+        )
+    )
+    7: PHPParser\Node\Expression\ArrayExpression(
+        items: array(
+            0: PHPParser\Node\Expression\ArrayItemExpression(
+                key: PHPParser\Node\Scalar\StringScalar(
+                    value: a
+                )
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: b
+                )
+                byRef: false
+            )
+        )
+    )
+)

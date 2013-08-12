@@ -1,0 +1,13 @@
+Clone
+-----
+<?php
+
+clone $a;
+-----
+array(
+    0: PHPParser\Node\Expression\CloneExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+)

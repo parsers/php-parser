@@ -1,0 +1,32 @@
+Conditional function definition
+-----
+<?php
+
+if (true) {
+    function A() {}
+}
+-----
+array(
+    0: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+            0: PHPParser\Node\Statement\FunctionStatement(
+                byRef: false
+                params: array(
+                )
+                Statements: array(
+                )
+                name: A
+            )
+        )
+        elseifs: array(
+        )
+        else: null
+        cond: PHPParser\Node\Expression\ConstFetchExpression(
+            name: PHPParser\Node\NameNode(
+                parts: array(
+                    0: true
+                )
+            )
+        )
+    )
+)

@@ -1,0 +1,40 @@
+Include and eval
+-----
+<?php
+include 'A.php';
+include_once 'A.php';
+require 'A.php';
+require_once 'A.php';
+eval('A');
+-----
+array(
+    0: PHPParser\Node\Expression\IncludeExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: A.php
+        )
+        type: 1
+    )
+    1: PHPParser\Node\Expression\IncludeExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: A.php
+        )
+        type: 2
+    )
+    2: PHPParser\Node\Expression\IncludeExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: A.php
+        )
+        type: 3
+    )
+    3: PHPParser\Node\Expression\IncludeExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: A.php
+        )
+        type: 4
+    )
+    4: PHPParser\Node\Expression\EvalExpression(
+        expr: PHPParser\Node\Scalar\StringScalar(
+            value: A
+        )
+    )
+)

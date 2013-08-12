@@ -1,0 +1,12 @@
+Print
+-----
+<?php
+print $a;
+-----
+array(
+    0: PHPParser\Node\Expression\PrintExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+)

@@ -1,0 +1,55 @@
+Control flow statements
+-----
+<?php
+
+break;
+break 2;
+
+continue;
+continue 2;
+
+return;
+return $a;
+
+throw $e;
+
+label:
+goto label;
+-----
+array(
+    0: PHPParser\Node\Statement\BreakStatement(
+        num: null
+    )
+    1: PHPParser\Node\Statement\BreakStatement(
+        num: PHPParser\Node\Scalar\LNumberScalar(
+            value: 2
+        )
+    )
+    2: PHPParser\Node\Statement\ContinueStatement(
+        num: null
+    )
+    3: PHPParser\Node\Statement\ContinueStatement(
+        num: PHPParser\Node\Scalar\LNumberScalar(
+            value: 2
+        )
+    )
+    4: PHPParser\Node\Statement\ReturnStatement(
+        expr: null
+    )
+    5: PHPParser\Node\Statement\ReturnStatement(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    6: PHPParser\Node\Statement\ThrowStatement(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: e
+        )
+    )
+    7: PHPParser\Node\Statement\LabelStatement(
+        name: label
+    )
+    8: PHPParser\Node\Statement\GotoStatement(
+        name: label
+    )
+)

@@ -1,0 +1,17 @@
+Final class
+-----
+<?php
+
+final class A {}
+-----
+array(
+    0: PHPParser\Node\Statement\ClassStatement(
+        type: 32
+        extends: null
+        implements: array(
+        )
+        Statements: array(
+        )
+        name: A
+    )
+)

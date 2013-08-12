@@ -1,0 +1,75 @@
+isset() and empty()
+-----
+<?php
+isset($a);
+isset($a, $b, $c);
+
+empty($a);
+empty(foo());
+empty(array(1, 2, 3));
+-----
+array(
+    0: PHPParser\Node\Expression\IssetExpression(
+        vars: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    1: PHPParser\Node\Expression\IssetExpression(
+        vars: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            2: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+    )
+    2: PHPParser\Node\Expression\EmptyExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    3: PHPParser\Node\Expression\EmptyExpression(
+        expr: PHPParser\Node\Expression\FuncCallExpression(
+            name: PHPParser\Node\NameNode(
+                parts: array(
+                    0: foo
+                )
+            )
+            args: array(
+            )
+        )
+    )
+    4: PHPParser\Node\Expression\EmptyExpression(
+        expr: PHPParser\Node\Expression\ArrayExpression(
+            items: array(
+                0: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 1
+                    )
+                    byRef: false
+                )
+                1: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 2
+                    )
+                    byRef: false
+                )
+                2: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 3
+                    )
+                    byRef: false
+                )
+            )
+        )
+    )
+)

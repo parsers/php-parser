@@ -1,0 +1,139 @@
+Foreach loop
+-----
+<?php
+
+// foreach on variable
+foreach ($a as $b)  {}
+foreach ($a as &$b) {}
+foreach ($a as $b => $c) {}
+foreach ($a as $b => &$c) {}
+foreach ($a as list($a, $b)) {}
+foreach ($a as $a => list($b, , $c)) {}
+
+// foreach on expression
+foreach (array() as $b) {}
+
+// alternative syntax
+foreach ($a as $b):
+endforeach;
+-----
+array(
+    0: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    1: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: true
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    2: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    3: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+        byRef: true
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    4: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\ListExpression(
+            vars: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                1: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+            )
+        )
+    )
+    5: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\ListExpression(
+            vars: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                1: null
+                2: PHPParser\Node\Expression\VariableExpression(
+                    name: c
+                )
+            )
+        )
+    )
+    6: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\ArrayExpression(
+            items: array(
+            )
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    7: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: false
+        Statements: array(
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+)

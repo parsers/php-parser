@@ -1,0 +1,72 @@
+Ternary operator
+-----
+<?php
+
+// ternary
+$a ? $b : $c;
+$a ?: $c;
+
+// precedence
+$a ? $b : $c ? $d : $e;
+$a ? $b : ($c ? $d : $e);
+-----
+array(
+    0: PHPParser\Node\Expression\TernaryExpression(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        if: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+        else: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    1: PHPParser\Node\Expression\TernaryExpression(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        if: null
+        else: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    2: PHPParser\Node\Expression\TernaryExpression(
+        cond: PHPParser\Node\Expression\TernaryExpression(
+            cond: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            if: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            else: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+        if: PHPParser\Node\Expression\VariableExpression(
+            name: d
+        )
+        else: PHPParser\Node\Expression\VariableExpression(
+            name: e
+        )
+    )
+    3: PHPParser\Node\Expression\TernaryExpression(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        if: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+        else: PHPParser\Node\Expression\TernaryExpression(
+            cond: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+            if: PHPParser\Node\Expression\VariableExpression(
+                name: d
+            )
+            else: PHPParser\Node\Expression\VariableExpression(
+                name: e
+            )
+        )
+    )
+)

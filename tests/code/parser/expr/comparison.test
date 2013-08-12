@@ -1,0 +1,98 @@
+Comparison operators
+-----
+<?php
+$a < $b;
+$a <= $b;
+$a > $b;
+$a >= $b;
+$a == $b;
+$a === $b;
+$a != $b;
+$a !== $b;
+$a instanceof B;
+$a instanceof $b;
+-----
+array(
+    0: PHPParser\Node\Expression\SmallerExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    1: PHPParser\Node\Expression\SmallerOrEqualExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    2: PHPParser\Node\Expression\GreaterExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    3: PHPParser\Node\Expression\GreaterOrEqualExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    4: PHPParser\Node\Expression\EqualExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    5: PHPParser\Node\Expression\IdenticalExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    6: PHPParser\Node\Expression\NotEqualExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    7: PHPParser\Node\Expression\NotIdenticalExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    8: PHPParser\Node\Expression\InstanceofExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: B
+            )
+        )
+    )
+    9: PHPParser\Node\Expression\InstanceofExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        class: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+)

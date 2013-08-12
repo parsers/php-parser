@@ -1,0 +1,35 @@
+Interface
+-----
+<?php
+
+interface A extends C, D {
+    public function a();
+}
+-----
+array(
+    0: PHPParser\Node\Statement\InterfaceStatement(
+        extends: array(
+            0: PHPParser\Node\NameNode(
+                parts: array(
+                    0: C
+                )
+            )
+            1: PHPParser\Node\NameNode(
+                parts: array(
+                    0: D
+                )
+            )
+        )
+        Statements: array(
+            0: PHPParser\Node\Statement\ClassMethodStatement(
+                type: 1
+                byRef: false
+                params: array(
+                )
+                Statements: null
+                name: a
+            )
+        )
+        name: A
+    )
+)

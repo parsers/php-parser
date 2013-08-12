@@ -1,0 +1,85 @@
+Aliases (use)
+-----
+<?php
+
+use A\B;
+use C\D as E;
+use F\G as H, J;
+
+// evil alias notation - Do Not Use!
+use \A;
+use \A as B;
+-----
+array(
+    0: PHPParser\Node\Statement\UseStatement(
+        uses: array(
+            0: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: A
+                        1: B
+                    )
+                )
+                alias: B
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\UseStatement(
+        uses: array(
+            0: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: C
+                        1: D
+                    )
+                )
+                alias: E
+            )
+        )
+    )
+    2: PHPParser\Node\Statement\UseStatement(
+        uses: array(
+            0: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: F
+                        1: G
+                    )
+                )
+                alias: H
+            )
+            1: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: J
+                    )
+                )
+                alias: J
+            )
+        )
+    )
+    3: PHPParser\Node\Statement\UseStatement(
+        uses: array(
+            0: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: A
+                    )
+                )
+                alias: A
+            )
+        )
+    )
+    4: PHPParser\Node\Statement\UseStatement(
+        uses: array(
+            0: PHPParser\Node\Statement\UseUseStatement(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: A
+                    )
+                )
+                alias: B
+            )
+        )
+    )
+)

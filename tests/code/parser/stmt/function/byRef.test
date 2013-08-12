@@ -1,0 +1,37 @@
+Return and pass by ref
+-----
+<?php
+
+function a(&$b) {}
+function &a($b) {}
+-----
+array(
+    0: PHPParser\Node\Statement\FunctionStatement(
+        byRef: false
+        params: array(
+            0: PHPParser\Node\ParamNode(
+                name: b
+                default: null
+                type: null
+                byRef: true
+            )
+        )
+        Statements: array(
+        )
+        name: a
+    )
+    1: PHPParser\Node\Statement\FunctionStatement(
+        byRef: true
+        params: array(
+            0: PHPParser\Node\ParamNode(
+                name: b
+                default: null
+                type: null
+                byRef: false
+            )
+        )
+        Statements: array(
+        )
+        name: a
+    )
+)

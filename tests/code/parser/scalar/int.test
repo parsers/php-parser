@@ -1,0 +1,47 @@
+Different integer syntaxes
+-----
+<?php
+
+0;
+1;
+@@{ PHP_INT_MAX     }@@;
+@@{ PHP_INT_MAX + 1 }@@;
+0xFFF;
+0xfff;
+0XfFf;
+0777;
+0787;
+0b111000111000;
+-----
+array(
+    0: PHPParser\Node\Scalar\LNumberScalar(
+        value: 0
+    )
+    1: PHPParser\Node\Scalar\LNumberScalar(
+        value: 1
+    )
+    2: PHPParser\Node\Scalar\LNumberScalar(
+        value: @@{ PHP_INT_MAX }@@
+    )
+    3: PHPParser\Node\Scalar\DNumberScalar(
+        value: @@{ PHP_INT_MAX + 1 }@@
+    )
+    4: PHPParser\Node\Scalar\LNumberScalar(
+        value: 4095
+    )
+    5: PHPParser\Node\Scalar\LNumberScalar(
+        value: 4095
+    )
+    6: PHPParser\Node\Scalar\LNumberScalar(
+        value: 4095
+    )
+    7: PHPParser\Node\Scalar\LNumberScalar(
+        value: 511
+    )
+    8: PHPParser\Node\Scalar\LNumberScalar(
+        value: 7
+    )
+    9: PHPParser\Node\Scalar\LNumberScalar(
+        value: 3640
+    )
+)

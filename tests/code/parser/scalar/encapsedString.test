@@ -1,0 +1,148 @@
+Encapsed strings
+-----
+<?php
+
+"$A";
+"$A->B";
+"$A[B]";
+"$A[0]";
+"$A[0x0]";
+"$A[$B]";
+"{$A}";
+"{$A['B']}";
+"${A}";
+"${A['B']}";
+"${$A}";
+"A $B C";
+b"$A";
+-----
+array(
+    0: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+    1: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\PropertyFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                name: B
+            )
+        )
+    )
+    2: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+        )
+    )
+    3: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: 0
+                )
+            )
+        )
+    )
+    4: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: 0x0
+                )
+            )
+        )
+    )
+    5: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Expression\VariableExpression(
+                    name: B
+                )
+            )
+        )
+    )
+    6: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+    7: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+        )
+    )
+    8: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+    9: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+        )
+    )
+    10: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: PHPParser\Node\Expression\VariableExpression(
+                    name: A
+                )
+            )
+        )
+    )
+    11: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: A
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: B
+            )
+            2:  C
+        )
+    )
+    12: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+)

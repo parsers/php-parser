@@ -1,0 +1,25 @@
+While loop
+-----
+<?php
+
+while ($a) {}
+
+while ($a):
+endwhile;
+-----
+array(
+    0: PHPParser\Node\Statement\WhileStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        Statements: array(
+        )
+    )
+    1: PHPParser\Node\Statement\WhileStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        Statements: array(
+        )
+    )
+)

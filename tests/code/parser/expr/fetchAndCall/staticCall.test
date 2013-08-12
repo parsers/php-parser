@@ -1,0 +1,151 @@
+Static calls
+-----
+<?php
+
+// method name variations
+A::b();
+A::{'b'}();
+A::$b();
+A::$b['c']();
+A::$b['c']['d']();
+
+// array dereferencing
+A::b()['c'];
+
+// class name variations
+static::b();
+$a::b();
+${'a'}::b();
+$a['b']::c();
+-----
+array(
+    0: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: b
+        args: array(
+        )
+    )
+    1: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Scalar\StringScalar(
+            value: b
+        )
+        args: array(
+        )
+    )
+    2: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+        args: array(
+        )
+    )
+    3: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: c
+            )
+        )
+        args: array(
+        )
+    )
+    4: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                dim: PHPParser\Node\Scalar\StringScalar(
+                    value: c
+                )
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: d
+            )
+        )
+        args: array(
+        )
+    )
+    5: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\StaticCallExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            name: b
+            args: array(
+            )
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: c
+        )
+    )
+    6: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: static
+            )
+        )
+        name: b
+        args: array(
+        )
+    )
+    7: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        name: b
+        args: array(
+        )
+    )
+    8: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\Expression\VariableExpression(
+            name: PHPParser\Node\Scalar\StringScalar(
+                value: a
+            )
+        )
+        name: b
+        args: array(
+        )
+    )
+    9: PHPParser\Node\Expression\StaticCallExpression(
+        class: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: b
+            )
+        )
+        name: c
+        args: array(
+        )
+    )
+)

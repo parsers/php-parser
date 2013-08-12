@@ -1,0 +1,31 @@
+Magic constants
+-----
+<?php
+
+__CLASS__;
+__DIR__;
+__FILE__;
+__FUNCTION__;
+__LINE__;
+__METHOD__;
+__NAMESPACE__;
+__TRAIT__;
+-----
+array(
+    0: PHPParser\Node\MagicConstant\ClassMagicConstant(
+    )
+    1: PHPParser\Node\MagicConstant\DirMagicConstant(
+    )
+    2: PHPParser\Node\MagicConstant\FileMagicConstant(
+    )
+    3: PHPParser\Node\MagicConstant\FunctionMagicConstant(
+    )
+    4: PHPParser\Node\MagicConstant\LineMagicConstant(
+    )
+    5: PHPParser\Node\MagicConstant\MethodMagicConstant(
+    )
+    6: PHPParser\Node\MagicConstant\NamespaceMagicConstant(
+    )
+    7: PHPParser\Node\MagicConstant\TraitMagicConstant(
+    )
+)

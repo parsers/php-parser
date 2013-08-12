@@ -1,0 +1,187 @@
+Mathematical operators
+-----
+<?php
+
+// unary ops
+~$a;
++$a;
+-$a;
+
+// binary ops
+$a & $b;
+$a | $b;
+$a ^ $b;
+$a . $b;
+$a / $b;
+$a - $b;
+$a % $b;
+$a * $b;
+$a + $b;
+$a << $b;
+$a >> $b;
+
+// associativity
+$a * $b * $c;
+$a * ($b * $c);
+
+// precedence
+$a + $b * $c;
+($a + $b) * $c;
+-----
+array(
+    0: PHPParser\Node\Expression\BitwiseNotExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    1: PHPParser\Node\Expression\UnaryPlusExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    2: PHPParser\Node\Expression\UnaryMinusExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    3: PHPParser\Node\Expression\BitwiseAndExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    4: PHPParser\Node\Expression\BitwiseOrExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    5: PHPParser\Node\Expression\BitwiseXorExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    6: PHPParser\Node\Expression\ConcatExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    7: PHPParser\Node\Expression\DivExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    8: PHPParser\Node\Expression\MinusExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    9: PHPParser\Node\Expression\ModExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    10: PHPParser\Node\Expression\MulExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    11: PHPParser\Node\Expression\PlusExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    12: PHPParser\Node\Expression\ShiftLeftExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    13: PHPParser\Node\Expression\ShiftRightExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    14: PHPParser\Node\Expression\MulExpression(
+        left: PHPParser\Node\Expression\MulExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    15: PHPParser\Node\Expression\MulExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\MulExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+    )
+    16: PHPParser\Node\Expression\PlusExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\MulExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+    )
+    17: PHPParser\Node\Expression\MulExpression(
+        left: PHPParser\Node\Expression\PlusExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+)

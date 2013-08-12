@@ -1,0 +1,27 @@
+Inline HTML
+-----
+<?php
+$a;
+?>
+B
+<?php
+$c;
+?>
+<?php
+$d;
+-----
+array(
+    0: PHPParser\Node\Expression\VariableExpression(
+        name: a
+    )
+    1: PHPParser\Node\Statement\InlineHTMLStatement(
+        value: B
+
+    )
+    2: PHPParser\Node\Expression\VariableExpression(
+        name: c
+    )
+    3: PHPParser\Node\Expression\VariableExpression(
+        name: d
+    )
+)

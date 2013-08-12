@@ -1,0 +1,138 @@
+Default values (static scalar tests)
+-----
+<?php
+
+function a(
+    $b = null,
+    $c = 'foo',
+    $d = A::B,
+    $f = +1,
+    $g = -1.0,
+    $h = array(),
+    $i = [],
+    $j = ['foo'],
+    $k = ['foo', 'bar' => 'baz']
+) {}
+-----
+array(
+    0: PHPParser\Node\Statement\FunctionStatement(
+        byRef: false
+        params: array(
+            0: PHPParser\Node\ParamNode(
+                name: b
+                default: PHPParser\Node\Expression\ConstFetchExpression(
+                    name: PHPParser\Node\NameNode(
+                        parts: array(
+                            0: null
+                        )
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            1: PHPParser\Node\ParamNode(
+                name: c
+                default: PHPParser\Node\Scalar\StringScalar(
+                    value: foo
+                )
+                type: null
+                byRef: false
+            )
+            2: PHPParser\Node\ParamNode(
+                name: d
+                default: PHPParser\Node\Expression\ClassConstFetchExpression(
+                    class: PHPParser\Node\NameNode(
+                        parts: array(
+                            0: A
+                        )
+                    )
+                    name: B
+                )
+                type: null
+                byRef: false
+            )
+            3: PHPParser\Node\ParamNode(
+                name: f
+                default: PHPParser\Node\Expression\UnaryPlusExpression(
+                    expr: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 1
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            4: PHPParser\Node\ParamNode(
+                name: g
+                default: PHPParser\Node\Expression\UnaryMinusExpression(
+                    expr: PHPParser\Node\Scalar\DNumberScalar(
+                        value: 1
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            5: PHPParser\Node\ParamNode(
+                name: h
+                default: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            6: PHPParser\Node\ParamNode(
+                name: i
+                default: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            7: PHPParser\Node\ParamNode(
+                name: j
+                default: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                        0: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\StringScalar(
+                                value: foo
+                            )
+                            byRef: false
+                        )
+                    )
+                )
+                type: null
+                byRef: false
+            )
+            8: PHPParser\Node\ParamNode(
+                name: k
+                default: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                        0: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\StringScalar(
+                                value: foo
+                            )
+                            byRef: false
+                        )
+                        1: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: PHPParser\Node\Scalar\StringScalar(
+                                value: bar
+                            )
+                            value: PHPParser\Node\Scalar\StringScalar(
+                                value: baz
+                            )
+                            byRef: false
+                        )
+                    )
+                )
+                type: null
+                byRef: false
+            )
+        )
+        Statements: array(
+        )
+        name: a
+    )
+)

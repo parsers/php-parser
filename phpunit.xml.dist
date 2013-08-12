@@ -1,0 +1,12 @@
+<phpunit bootstrap="tests/Bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="PHPParser Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">lib/PHPParser</directory>
+        </whitelist>
+    </filter>
+</phpunit>

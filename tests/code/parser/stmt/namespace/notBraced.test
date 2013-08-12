@@ -1,0 +1,45 @@
+Semicolon style namespaces
+-----
+<?php
+
+namespace Foo\Bar;
+foo;
+
+namespace Bar;
+bar;
+-----
+array(
+    0: PHPParser\Node\Statement\NamespaceStatement(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: Foo
+                1: Bar
+            )
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\ConstFetchExpression(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: foo
+                    )
+                )
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\NamespaceStatement(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: Bar
+            )
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\ConstFetchExpression(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: bar
+                    )
+                )
+            )
+        )
+    )
+)

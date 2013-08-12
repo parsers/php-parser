@@ -1,0 +1,44 @@
+Type hints
+-----
+<?php
+
+function a($b, array $c, callable $d, E $f) {}
+-----
+array(
+    0: PHPParser\Node\Statement\FunctionStatement(
+        byRef: false
+        params: array(
+            0: PHPParser\Node\ParamNode(
+                name: b
+                default: null
+                type: null
+                byRef: false
+            )
+            1: PHPParser\Node\ParamNode(
+                name: c
+                default: null
+                type: array
+                byRef: false
+            )
+            2: PHPParser\Node\ParamNode(
+                name: d
+                default: null
+                type: callable
+                byRef: false
+            )
+            3: PHPParser\Node\ParamNode(
+                name: f
+                default: null
+                type: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: E
+                    )
+                )
+                byRef: false
+            )
+        )
+        Statements: array(
+        )
+        name: a
+    )
+)

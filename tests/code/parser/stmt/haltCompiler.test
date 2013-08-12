@@ -1,0 +1,55 @@
+__halt_compiler
+-----
+<?php
+
+$a;
+__halt_compiler()
+?>
+Hallo World!
+-----
+array(
+    0: PHPParser\Node\Expression\VariableExpression(
+        name: a
+    )
+    1: PHPParser\Node\Statement\HaltCompilerStatement(
+        remaining: Hallo World!
+    )
+)
+-----
+<?php
+
+$a;
+__halt_compiler();Hallo World!
+-----
+array(
+    0: PHPParser\Node\Expression\VariableExpression(
+        name: a
+    )
+    1: PHPParser\Node\Statement\HaltCompilerStatement(
+        remaining: Hallo World!
+    )
+)
+-----
+<?php
+
+namespace A;
+$a;
+__halt_compiler();
+-----
+array(
+    0: PHPParser\Node\Statement\NamespaceStatement(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\HaltCompilerStatement(
+        remaining:
+    )
+)

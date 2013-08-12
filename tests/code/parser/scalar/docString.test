@@ -1,0 +1,67 @@
+Nowdoc and heredoc strings
+-----
+<?php
+
+// empty strings
+<<<'EOS'
+EOS;
+<<<EOS
+EOS;
+
+// constant encapsed strings
+<<<'EOS'
+Test '" $a \n
+EOS;
+<<<EOS
+Test '" \$a \n
+EOS;
+
+// encapsed strings
+<<<EOS
+Test $a
+EOS;
+<<<EOS
+Test $a and $b->c test
+EOS;
+
+// comment to force line break before EOF
+-----
+array(
+    0: PHPParser\Node\Scalar\StringScalar(
+        value:
+    )
+    1: PHPParser\Node\Scalar\StringScalar(
+        value:
+    )
+    2: PHPParser\Node\Scalar\StringScalar(
+        value: Test '" $a \n
+    )
+    3: PHPParser\Node\Scalar\StringScalar(
+        value: Test '" $a
+
+    )
+    4: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: Test
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    5: PHPParser\Node\Scalar\EncapsedScalar(
+        parts: array(
+            0: Test
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            2:  and
+            3: PHPParser\Node\Expression\PropertyFetchExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                name: c
+            )
+            4:  test
+        )
+    )
+)

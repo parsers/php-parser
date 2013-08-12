@@ -1,0 +1,227 @@
+Generators (yield expression
+-----
+<?php
+
+function gen() {
+    // statements
+    yield;
+    yield $value;
+    yield $key => $value;
+
+    // expressions
+    $data = yield;
+    $data = (yield $value);
+    $data = (yield $key => $value);
+
+    // yield in language constructs with their own parentheses
+    if (yield $foo); elseif (yield $foo);
+    if (yield $foo): elseif (yield $foo): endif;
+    while (yield $foo);
+    do {} while (yield $foo);
+    switch (yield $foo) {}
+    die(yield $foo);
+
+    // yield in function calls
+    func(yield $foo);
+    $foo->func(yield $foo);
+    new Foo(yield $foo);
+}
+-----
+array(
+    0: PHPParser\Node\Statement\FunctionStatement(
+        byRef: false
+        params: array(
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\YieldExpression(
+                key: null
+                value: null
+            )
+            1: PHPParser\Node\Expression\YieldExpression(
+                key: null
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: value
+                )
+            )
+            2: PHPParser\Node\Expression\YieldExpression(
+                key: PHPParser\Node\Expression\VariableExpression(
+                    name: key
+                )
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: value
+                )
+            )
+            3: PHPParser\Node\Expression\AssignExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: data
+                )
+                expr: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: null
+                )
+            )
+            4: PHPParser\Node\Expression\AssignExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: data
+                )
+                expr: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: value
+                    )
+                )
+            )
+            5: PHPParser\Node\Expression\AssignExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: data
+                )
+                expr: PHPParser\Node\Expression\YieldExpression(
+                    key: PHPParser\Node\Expression\VariableExpression(
+                        name: key
+                    )
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: value
+                    )
+                )
+            )
+            6: PHPParser\Node\Statement\IfStatement(
+                Statements: array(
+                )
+                elseifs: array(
+                    0: PHPParser\Node\Statement\ElseIfStatement(
+                        cond: PHPParser\Node\Expression\YieldExpression(
+                            key: null
+                            value: PHPParser\Node\Expression\VariableExpression(
+                                name: foo
+                            )
+                        )
+                        Statements: array(
+                        )
+                    )
+                )
+                else: null
+                cond: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+            )
+            7: PHPParser\Node\Statement\IfStatement(
+                Statements: array(
+                )
+                elseifs: array(
+                    0: PHPParser\Node\Statement\ElseIfStatement(
+                        cond: PHPParser\Node\Expression\YieldExpression(
+                            key: null
+                            value: PHPParser\Node\Expression\VariableExpression(
+                                name: foo
+                            )
+                        )
+                        Statements: array(
+                        )
+                    )
+                )
+                else: null
+                cond: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+            )
+            8: PHPParser\Node\Statement\WhileStatement(
+                cond: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+                Statements: array(
+                )
+            )
+            9: PHPParser\Node\Statement\DoStatement(
+                cond: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+                Statements: array(
+                )
+            )
+            10: PHPParser\Node\Statement\SwitchStatement(
+                cond: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+                cases: array(
+                )
+            )
+            11: PHPParser\Node\Expression\ExitExpression(
+                expr: PHPParser\Node\Expression\YieldExpression(
+                    key: null
+                    value: PHPParser\Node\Expression\VariableExpression(
+                        name: foo
+                    )
+                )
+            )
+            12: PHPParser\Node\Expression\FuncCallExpression(
+                name: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: func
+                    )
+                )
+                args: array(
+                    0: PHPParser\Node\ArgNode(
+                        value: PHPParser\Node\Expression\YieldExpression(
+                            key: null
+                            value: PHPParser\Node\Expression\VariableExpression(
+                                name: foo
+                            )
+                        )
+                        byRef: false
+                    )
+                )
+            )
+            13: PHPParser\Node\Expression\MethodCallExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: foo
+                )
+                name: func
+                args: array(
+                    0: PHPParser\Node\ArgNode(
+                        value: PHPParser\Node\Expression\YieldExpression(
+                            key: null
+                            value: PHPParser\Node\Expression\VariableExpression(
+                                name: foo
+                            )
+                        )
+                        byRef: false
+                    )
+                )
+            )
+            14: PHPParser\Node\Expression\NewExpression(
+                class: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: Foo
+                    )
+                )
+                args: array(
+                    0: PHPParser\Node\ArgNode(
+                        value: PHPParser\Node\Expression\YieldExpression(
+                            key: null
+                            value: PHPParser\Node\Expression\VariableExpression(
+                                name: foo
+                            )
+                        )
+                        byRef: false
+                    )
+                )
+            )
+        )
+        name: gen
+    )
+)

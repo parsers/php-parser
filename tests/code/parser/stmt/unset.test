@@ -1,0 +1,26 @@
+Unset
+-----
+<?php
+
+unset($a);
+unset($b, $c);
+-----
+array(
+    0: PHPParser\Node\Statement\UnsetStatement(
+        vars: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\UnsetStatement(
+        vars: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+    )
+)

@@ -1,0 +1,70 @@
+New expression dereferencing
+-----
+<?php
+
+(new A)->b;
+(new A)->b();
+(new A)['b'];
+(new A)['b']['c'];
+-----
+array(
+    0: PHPParser\Node\Expression\PropertyFetchExpression(
+        var: PHPParser\Node\Expression\NewExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            args: array(
+            )
+        )
+        name: b
+    )
+    1: PHPParser\Node\Expression\MethodCallExpression(
+        var: PHPParser\Node\Expression\NewExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            args: array(
+            )
+        )
+        name: b
+        args: array(
+        )
+    )
+    2: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\NewExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            args: array(
+            )
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: b
+        )
+    )
+    3: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\NewExpression(
+                class: PHPParser\Node\NameNode(
+                    parts: array(
+                        0: A
+                    )
+                )
+                args: array(
+                )
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: b
+            )
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: c
+        )
+    )
+)

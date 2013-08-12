@@ -1,0 +1,86 @@
+For loop
+-----
+<?php
+
+// "classical" loop
+for ($i = 0; $i < $c; ++$i) {}
+
+// multiple expressions
+for (;$a,$b;) {}
+
+// infinite loop
+for (;;) {}
+
+// alternative syntax
+for (;;):
+endfor;
+-----
+array(
+    0: PHPParser\Node\Statement\ForStatement(
+        init: array(
+            0: PHPParser\Node\Expression\AssignExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: i
+                )
+                expr: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 0
+                )
+            )
+        )
+        cond: array(
+            0: PHPParser\Node\Expression\SmallerExpression(
+                left: PHPParser\Node\Expression\VariableExpression(
+                    name: i
+                )
+                right: PHPParser\Node\Expression\VariableExpression(
+                    name: c
+                )
+            )
+        )
+        loop: array(
+            0: PHPParser\Node\Expression\PreIncExpression(
+                var: PHPParser\Node\Expression\VariableExpression(
+                    name: i
+                )
+            )
+        )
+        Statements: array(
+        )
+    )
+    1: PHPParser\Node\Statement\ForStatement(
+        init: array(
+        )
+        cond: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            1: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+        )
+        loop: array(
+        )
+        Statements: array(
+        )
+    )
+    2: PHPParser\Node\Statement\ForStatement(
+        init: array(
+        )
+        cond: array(
+        )
+        loop: array(
+        )
+        Statements: array(
+        )
+    )
+    3: PHPParser\Node\Statement\ForStatement(
+        init: array(
+        )
+        cond: array(
+        )
+        loop: array(
+        )
+        Statements: array(
+        )
+    )
+)

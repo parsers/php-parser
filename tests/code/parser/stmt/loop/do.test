@@ -1,0 +1,17 @@
+Do loop
+-----
+<?php
+
+do {
+
+} while ($a);
+-----
+array(
+    0: PHPParser\Node\Statement\DoStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        Statements: array(
+        )
+    )
+)

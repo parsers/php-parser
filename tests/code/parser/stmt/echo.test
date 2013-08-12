@@ -1,0 +1,32 @@
+Echo
+-----
+<?php
+
+echo 'Hallo World!';
+echo 'Hallo', ' ', 'World', '!';
+-----
+array(
+    0: PHPParser\Node\Statement\EchoStatement(
+        exprs: array(
+            0: PHPParser\Node\Scalar\StringScalar(
+                value: Hallo World!
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\EchoStatement(
+        exprs: array(
+            0: PHPParser\Node\Scalar\StringScalar(
+                value: Hallo
+            )
+            1: PHPParser\Node\Scalar\StringScalar(
+                value:
+            )
+            2: PHPParser\Node\Scalar\StringScalar(
+                value: World
+            )
+            3: PHPParser\Node\Scalar\StringScalar(
+                value: !
+            )
+        )
+    )
+)

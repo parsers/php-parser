@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AST xmlns:scalar="http://nikic.github.com/PHPParser/XML/scalar">
+ <scalar:array>
+  <scalar:array></scalar:array>
+  <scalar:array/>
+  <scalar:string>test</scalar:string>
+  <scalar:string></scalar:string>
+  <scalar:string/>
+  <scalar:int>1</scalar:int>
+  <scalar:float>1</scalar:float>
+  <scalar:float>1.5</scalar:float>
+  <scalar:true/>
+  <scalar:false/>
+  <scalar:null/>
+ </scalar:array>
+</AST>

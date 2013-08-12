@@ -1,0 +1,12 @@
+Error suppression
+-----
+<?php
+@$a;
+-----
+array(
+    0: PHPParser\Node\Expression\ErrorSuppressExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+)

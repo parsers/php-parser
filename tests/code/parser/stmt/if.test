@@ -1,0 +1,95 @@
+If/Elseif/Else
+-----
+<?php
+
+if      ($a) {}
+elseif  ($b) {}
+elseif  ($c) {}
+else         {}
+
+if ($a) {} // without else
+
+if      ($a):
+elseif  ($b):
+elseif  ($c):
+else        :
+endif;
+
+if ($a): endif; // without else
+-----
+array(
+    0: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+        )
+        elseifs: array(
+            0: PHPParser\Node\Statement\ElseIfStatement(
+                cond: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                Statements: array(
+                )
+            )
+            1: PHPParser\Node\Statement\ElseIfStatement(
+                cond: PHPParser\Node\Expression\VariableExpression(
+                    name: c
+                )
+                Statements: array(
+                )
+            )
+        )
+        else: PHPParser\Node\Statement\ElseStatement(
+            Statements: array(
+            )
+        )
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    1: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+        )
+        elseifs: array(
+        )
+        else: null
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    2: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+        )
+        elseifs: array(
+            0: PHPParser\Node\Statement\ElseIfStatement(
+                cond: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                Statements: array(
+                )
+            )
+            1: PHPParser\Node\Statement\ElseIfStatement(
+                cond: PHPParser\Node\Expression\VariableExpression(
+                    name: c
+                )
+                Statements: array(
+                )
+            )
+        )
+        else: PHPParser\Node\Statement\ElseStatement(
+            Statements: array(
+            )
+        )
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    3: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+        )
+        elseifs: array(
+        )
+        else: null
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+)

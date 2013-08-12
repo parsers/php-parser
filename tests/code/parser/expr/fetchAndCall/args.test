@@ -1,0 +1,71 @@
+Arguments
+-----
+<?php
+
+f();
+f($a);
+f($a, $b);
+f(&$a);
+-----
+array(
+    0: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: f
+            )
+        )
+        args: array(
+        )
+    )
+    1: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: f
+            )
+        )
+        args: array(
+            0: PHPParser\Node\ArgNode(
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                byRef: false
+            )
+        )
+    )
+    2: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: f
+            )
+        )
+        args: array(
+            0: PHPParser\Node\ArgNode(
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                byRef: false
+            )
+            1: PHPParser\Node\ArgNode(
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                byRef: false
+            )
+        )
+    )
+    3: PHPParser\Node\Expression\FuncCallExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: f
+            )
+        )
+        args: array(
+            0: PHPParser\Node\ArgNode(
+                value: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                byRef: true
+            )
+        )
+    )
+)

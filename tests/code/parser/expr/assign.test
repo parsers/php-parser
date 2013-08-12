@@ -1,0 +1,225 @@
+Assignments
+-----
+<?php
+// simple assign
+$a = $b;
+
+// combined assign
+$a &= $b;
+$a |= $b;
+$a ^= $b;
+$a .= $b;
+$a /= $b;
+$a -= $b;
+$a %= $b;
+$a *= $b;
+$a += $b;
+$a <<= $b;
+$a >>= $b;
+
+// by ref assign
+$a =& $b;
+$a =& new B;
+
+// list() assign
+list($a) = $b;
+list($a, , $b) = $c;
+list($a, list(, $c), $d) = $e;
+
+// inc/dec
+++$a;
+$a++;
+--$a;
+$a--;
+-----
+array(
+    0: PHPParser\Node\Expression\AssignExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    1: PHPParser\Node\Expression\AssignBitwiseAndExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    2: PHPParser\Node\Expression\AssignBitwiseOrExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    3: PHPParser\Node\Expression\AssignBitwiseXorExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    4: PHPParser\Node\Expression\AssignConcatExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    5: PHPParser\Node\Expression\AssignDivExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    6: PHPParser\Node\Expression\AssignMinusExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    7: PHPParser\Node\Expression\AssignModExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    8: PHPParser\Node\Expression\AssignMulExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    9: PHPParser\Node\Expression\AssignPlusExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    10: PHPParser\Node\Expression\AssignShiftLeftExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    11: PHPParser\Node\Expression\AssignShiftRightExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    12: PHPParser\Node\Expression\AssignRefExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    13: PHPParser\Node\Expression\AssignRefExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\NewExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: B
+                )
+            )
+            args: array(
+            )
+        )
+    )
+    14: PHPParser\Node\Expression\AssignExpression(
+        var: PHPParser\Node\Expression\ListExpression(
+            vars: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+            )
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    15: PHPParser\Node\Expression\AssignExpression(
+        var: PHPParser\Node\Expression\ListExpression(
+            vars: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                1: null
+                2: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+            )
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+    16: PHPParser\Node\Expression\AssignExpression(
+        var: PHPParser\Node\Expression\ListExpression(
+            vars: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: a
+                )
+                1: PHPParser\Node\Expression\ListExpression(
+                    vars: array(
+                        0: null
+                        1: PHPParser\Node\Expression\VariableExpression(
+                            name: c
+                        )
+                    )
+                )
+                2: PHPParser\Node\Expression\VariableExpression(
+                    name: d
+                )
+            )
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: e
+        )
+    )
+    17: PHPParser\Node\Expression\PreIncExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    18: PHPParser\Node\Expression\PostIncExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    19: PHPParser\Node\Expression\PreDecExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    20: PHPParser\Node\Expression\PostDecExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+)

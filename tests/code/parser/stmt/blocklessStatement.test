@@ -1,0 +1,112 @@
+Blockless statements for if/for/etc
+-----
+<?php
+
+if ($a) $A;
+elseif ($b) $B;
+else $C;
+
+for (;;) $foo;
+
+foreach ($a as $b) $AB;
+
+while ($a) $A;
+
+do $A; while ($a);
+
+declare (a='b') $C;
+-----
+array(
+    0: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+        elseifs: array(
+            0: PHPParser\Node\Statement\ElseIfStatement(
+                cond: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                Statements: array(
+                    0: PHPParser\Node\Expression\VariableExpression(
+                        name: B
+                    )
+                )
+            )
+        )
+        else: PHPParser\Node\Statement\ElseStatement(
+            Statements: array(
+                0: PHPParser\Node\Expression\VariableExpression(
+                    name: C
+                )
+            )
+        )
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    1: PHPParser\Node\Statement\ForStatement(
+        init: array(
+        )
+        cond: array(
+        )
+        loop: array(
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: foo
+            )
+        )
+    )
+    2: PHPParser\Node\Statement\ForeachStatement(
+        keyVar: null
+        byRef: false
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: AB
+            )
+        )
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        valueVar: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    3: PHPParser\Node\Statement\WhileStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+    4: PHPParser\Node\Statement\DoStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: A
+            )
+        )
+    )
+    5: PHPParser\Node\Statement\DeclareStatement(
+        declares: array(
+            0: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: a
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: b
+                )
+            )
+        )
+        Statements: array(
+            0: PHPParser\Node\Expression\VariableExpression(
+                name: C
+            )
+        )
+    )
+)

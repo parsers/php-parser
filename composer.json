@@ -1,0 +1,19 @@
+{
+    "name": "parsers/phpparser",
+    "description": "A PHP parser written in PHP",
+    "keywords": ["php", "parser"],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Nikita Popov"
+            "name": "Hassan Amouhzi"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0": { "PHPParser": "lib/" }
+    }
+}

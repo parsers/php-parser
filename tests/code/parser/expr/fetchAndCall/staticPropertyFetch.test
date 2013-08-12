@@ -1,0 +1,71 @@
+Static property fetches
+-----
+<?php
+
+// property name variations
+A::$b;
+A::$$b;
+A::${'b'};
+
+// array access
+A::$b['c'];
+A::$b{'c'};
+
+// class name variations can be found in staticCall.test
+-----
+array(
+    0: PHPParser\Node\Expression\StaticPropertyFetchExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: b
+    )
+    1: PHPParser\Node\Expression\StaticPropertyFetchExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    2: PHPParser\Node\Expression\StaticPropertyFetchExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: PHPParser\Node\Scalar\StringScalar(
+            value: b
+        )
+    )
+    3: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\StaticPropertyFetchExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            name: b
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: c
+        )
+    )
+    4: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\StaticPropertyFetchExpression(
+            class: PHPParser\Node\NameNode(
+                parts: array(
+                    0: A
+                )
+            )
+            name: b
+        )
+        dim: PHPParser\Node\Scalar\StringScalar(
+            value: c
+        )
+    )
+)

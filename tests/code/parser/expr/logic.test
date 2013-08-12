@@ -1,0 +1,138 @@
+Logical operators
+-----
+<?php
+
+// boolean ops
+$a && $b;
+$a || $b;
+!$a;
+!!$a;
+
+// logical ops
+$a and $b;
+$a or $b;
+$a xor $b;
+
+// precedence
+$a && $b || $c && $d;
+$a && ($b || $c) && $d;
+
+$a = $b || $c;
+$a = $b or $c;
+-----
+array(
+    0: PHPParser\Node\Expression\BooleanAndExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    1: PHPParser\Node\Expression\BooleanOrExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    2: PHPParser\Node\Expression\BooleanNotExpression(
+        expr: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    3: PHPParser\Node\Expression\BooleanNotExpression(
+        expr: PHPParser\Node\Expression\BooleanNotExpression(
+            expr: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    4: PHPParser\Node\Expression\LogicalAndExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    5: PHPParser\Node\Expression\LogicalOrExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    6: PHPParser\Node\Expression\LogicalXorExpression(
+        left: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: b
+        )
+    )
+    7: PHPParser\Node\Expression\BooleanOrExpression(
+        left: PHPParser\Node\Expression\BooleanAndExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+        )
+        right: PHPParser\Node\Expression\BooleanAndExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: d
+            )
+        )
+    )
+    8: PHPParser\Node\Expression\BooleanAndExpression(
+        left: PHPParser\Node\Expression\BooleanAndExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            right: PHPParser\Node\Expression\BooleanOrExpression(
+                left: PHPParser\Node\Expression\VariableExpression(
+                    name: b
+                )
+                right: PHPParser\Node\Expression\VariableExpression(
+                    name: c
+                )
+            )
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: d
+        )
+    )
+    9: PHPParser\Node\Expression\AssignExpression(
+        var: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        expr: PHPParser\Node\Expression\BooleanOrExpression(
+            left: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+            right: PHPParser\Node\Expression\VariableExpression(
+                name: c
+            )
+        )
+    )
+    10: PHPParser\Node\Expression\LogicalOrExpression(
+        left: PHPParser\Node\Expression\AssignExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            expr: PHPParser\Node\Expression\VariableExpression(
+                name: b
+            )
+        )
+        right: PHPParser\Node\Expression\VariableExpression(
+            name: c
+        )
+    )
+)

@@ -1,0 +1,181 @@
+Array/string dereferencing
+-----
+<?php
+
+"abc"[2];
+"abc"[2][0][0];
+
+[1, 2, 3][2];
+[1, 2, 3][2][0][0];
+
+array(1, 2, 3)[2];
+array(1, 2, 3)[2][0][0];
+-----
+array(
+    0: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Scalar\StringScalar(
+            value: abc
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 2
+        )
+    )
+    1: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Scalar\StringScalar(
+                    value: abc
+                )
+                dim: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 2
+                )
+            )
+            dim: PHPParser\Node\Scalar\LNumberScalar(
+                value: 0
+            )
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 0
+        )
+    )
+    2: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayExpression(
+            items: array(
+                0: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 1
+                    )
+                    byRef: false
+                )
+                1: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 2
+                    )
+                    byRef: false
+                )
+                2: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 3
+                    )
+                    byRef: false
+                )
+            )
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 2
+        )
+    )
+    3: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                        0: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 1
+                            )
+                            byRef: false
+                        )
+                        1: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 2
+                            )
+                            byRef: false
+                        )
+                        2: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 3
+                            )
+                            byRef: false
+                        )
+                    )
+                )
+                dim: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 2
+                )
+            )
+            dim: PHPParser\Node\Scalar\LNumberScalar(
+                value: 0
+            )
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 0
+        )
+    )
+    4: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayExpression(
+            items: array(
+                0: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 1
+                    )
+                    byRef: false
+                )
+                1: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 2
+                    )
+                    byRef: false
+                )
+                2: PHPParser\Node\Expression\ArrayItemExpression(
+                    key: null
+                    value: PHPParser\Node\Scalar\LNumberScalar(
+                        value: 3
+                    )
+                    byRef: false
+                )
+            )
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 2
+        )
+    )
+    5: PHPParser\Node\Expression\ArrayDimFetchExpression(
+        var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\ArrayDimFetchExpression(
+                var: PHPParser\Node\Expression\ArrayExpression(
+                    items: array(
+                        0: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 1
+                            )
+                            byRef: false
+                        )
+                        1: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 2
+                            )
+                            byRef: false
+                        )
+                        2: PHPParser\Node\Expression\ArrayItemExpression(
+                            key: null
+                            value: PHPParser\Node\Scalar\LNumberScalar(
+                                value: 3
+                            )
+                            byRef: false
+                        )
+                    )
+                )
+                dim: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 2
+                )
+            )
+            dim: PHPParser\Node\Scalar\LNumberScalar(
+                value: 0
+            )
+        )
+        dim: PHPParser\Node\Scalar\LNumberScalar(
+            value: 0
+        )
+    )
+)

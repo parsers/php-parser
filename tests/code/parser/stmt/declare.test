@@ -1,0 +1,47 @@
+Declare
+-----
+<?php
+
+declare (A='B', C='D') {}
+
+declare (A='B', C='D'):
+enddeclare;
+-----
+array(
+    0: PHPParser\Node\Statement\DeclareStatement(
+        declares: array(
+            0: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: A
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+            1: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: C
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: D
+                )
+            )
+        )
+        Statements: array(
+        )
+    )
+    1: PHPParser\Node\Statement\DeclareStatement(
+        declares: array(
+            0: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: A
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+            1: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: C
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: D
+                )
+            )
+        )
+        Statements: array(
+        )
+    )
+)

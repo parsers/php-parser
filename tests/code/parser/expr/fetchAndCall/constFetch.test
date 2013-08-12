@@ -1,0 +1,33 @@
+Constant fetches
+-----
+<?php
+
+A;
+A::B;
+A::class;
+-----
+array(
+    0: PHPParser\Node\Expression\ConstFetchExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+    )
+    1: PHPParser\Node\Expression\ClassConstFetchExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: B
+    )
+    2: PHPParser\Node\Expression\ClassConstFetchExpression(
+        class: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+        name: class
+    )
+)

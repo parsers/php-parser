@@ -1,0 +1,37 @@
+Some statements may occur outside of namespaces
+-----
+<?php
+declare(A='B');
+namespace B {
+
+}
+__halt_compiler()
+?>
+Hi!
+-----
+array(
+    0: PHPParser\Node\Statement\DeclareStatement(
+        declares: array(
+            0: PHPParser\Node\Statement\DeclareDeclareStatement(
+                key: A
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: B
+                )
+            )
+        )
+        Statements: array(
+        )
+    )
+    1: PHPParser\Node\Statement\NamespaceStatement(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: B
+            )
+        )
+        Statements: array(
+        )
+    )
+    2: PHPParser\Node\Statement\HaltCompilerStatement(
+        remaining: Hi!
+    )
+)

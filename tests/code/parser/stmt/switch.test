@@ -1,0 +1,67 @@
+Switch
+-----
+<?php
+
+switch ($a) {
+    case 0:
+    case 1;
+    default:
+}
+
+// alternative syntax
+switch ($a):
+endswitch;
+
+// leading semicolon
+switch ($a) { ; }
+switch ($a): ; endswitch;
+-----
+array(
+    0: PHPParser\Node\Statement\SwitchStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        cases: array(
+            0: PHPParser\Node\Statement\CaseStatement(
+                cond: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 0
+                )
+                Statements: array(
+                )
+            )
+            1: PHPParser\Node\Statement\CaseStatement(
+                cond: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 1
+                )
+                Statements: array(
+                )
+            )
+            2: PHPParser\Node\Statement\CaseStatement(
+                cond: null
+                Statements: array(
+                )
+            )
+        )
+    )
+    1: PHPParser\Node\Statement\SwitchStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        cases: array(
+        )
+    )
+    2: PHPParser\Node\Statement\SwitchStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        cases: array(
+        )
+    )
+    3: PHPParser\Node\Statement\SwitchStatement(
+        cond: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+        cases: array(
+        )
+    )
+)

@@ -1,0 +1,42 @@
+Different name types
+-----
+<?php
+
+A;
+A\B;
+\A\B;
+namespace\A\B;
+-----
+array(
+    0: PHPParser\Node\Expression\ConstFetchExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+            )
+        )
+    )
+    1: PHPParser\Node\Expression\ConstFetchExpression(
+        name: PHPParser\Node\NameNode(
+            parts: array(
+                0: A
+                1: B
+            )
+        )
+    )
+    2: PHPParser\Node\Expression\ConstFetchExpression(
+        name: PHPParser\Node\FullyQualifiedNameNode(
+            parts: array(
+                0: A
+                1: B
+            )
+        )
+    )
+    3: PHPParser\Node\Expression\ConstFetchExpression(
+        name: PHPParser\Node\RelativeNameNode(
+            parts: array(
+                0: A
+                1: B
+            )
+        )
+    )
+)

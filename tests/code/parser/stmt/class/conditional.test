@@ -1,0 +1,33 @@
+Conditional class definition
+-----
+<?php
+
+if (true) {
+    class A {}
+}
+-----
+array(
+    0: PHPParser\Node\Statement\IfStatement(
+        Statements: array(
+            0: PHPParser\Node\Statement\ClassStatement(
+                type: 0
+                extends: null
+                implements: array(
+                )
+                Statements: array(
+                )
+                name: A
+            )
+        )
+        elseifs: array(
+        )
+        else: null
+        cond: PHPParser\Node\Expression\ConstFetchExpression(
+            name: PHPParser\Node\NameNode(
+                parts: array(
+                    0: true
+                )
+            )
+        )
+    )
+)

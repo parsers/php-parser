@@ -1,0 +1,40 @@
+Global constants
+-----
+<?php
+
+const A = 0, B = 1.0, C = 'A', D = E;
+-----
+array(
+    0: PHPParser\Node\Statement\ConstStatement(
+        consts: array(
+            0: PHPParser\Node\ConstNode(
+                name: A
+                value: PHPParser\Node\Scalar\LNumberScalar(
+                    value: 0
+                )
+            )
+            1: PHPParser\Node\ConstNode(
+                name: B
+                value: PHPParser\Node\Scalar\DNumberScalar(
+                    value: 1
+                )
+            )
+            2: PHPParser\Node\ConstNode(
+                name: C
+                value: PHPParser\Node\Scalar\StringScalar(
+                    value: A
+                )
+            )
+            3: PHPParser\Node\ConstNode(
+                name: D
+                value: PHPParser\Node\Expression\ConstFetchExpression(
+                    name: PHPParser\Node\NameNode(
+                        parts: array(
+                            0: E
+                        )
+                    )
+                )
+            )
+        )
+    )
+)

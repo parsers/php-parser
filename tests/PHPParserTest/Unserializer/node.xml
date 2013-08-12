@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AST xmlns:node="http://nikic.github.com/PHPParser/XML/node" xmlns:subNode="http://nikic.github.com/PHPParser/XML/subNode" xmlns:attribute="http://nikic.github.com/PHPParser/XML/attribute" xmlns:scalar="http://nikic.github.com/PHPParser/XML/scalar">
+ <node:PHPParser_Node_Scalar_StringScalar line="1" docComment="/** doc comment */">
+  <attribute:startLine>
+   <scalar:int>1</scalar:int>
+  </attribute:startLine>
+  <attribute:comments>
+   <scalar:array>
+    <comment isDocComment="false" line="2">// comment
+</comment>
+    <comment isDocComment="true" line="3">/** doc comment */</comment>
+   </scalar:array>
+  </attribute:comments>
+  <subNode:value>
+   <scalar:string>Test</scalar:string>
+  </subNode:value>
+ </node:PHPParser_Node_Scalar_StringScalar>
+</AST>

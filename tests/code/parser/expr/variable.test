@@ -1,0 +1,54 @@
+Variable syntaxes
+-----
+<?php
+
+$a;
+${'a'};
+${foo()};
+$$a;
+$$$a;
+$$a['b'];
+-----
+array(
+    0: PHPParser\Node\Expression\VariableExpression(
+        name: a
+    )
+    1: PHPParser\Node\Expression\VariableExpression(
+        name: PHPParser\Node\Scalar\StringScalar(
+            value: a
+        )
+    )
+    2: PHPParser\Node\Expression\VariableExpression(
+        name: PHPParser\Node\Expression\FuncCallExpression(
+            name: PHPParser\Node\NameNode(
+                parts: array(
+                    0: foo
+                )
+            )
+            args: array(
+            )
+        )
+    )
+    3: PHPParser\Node\Expression\VariableExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: a
+        )
+    )
+    4: PHPParser\Node\Expression\VariableExpression(
+        name: PHPParser\Node\Expression\VariableExpression(
+            name: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+        )
+    )
+    5: PHPParser\Node\Expression\VariableExpression(
+        name: PHPParser\Node\Expression\ArrayDimFetchExpression(
+            var: PHPParser\Node\Expression\VariableExpression(
+                name: a
+            )
+            dim: PHPParser\Node\Scalar\StringScalar(
+                value: b
+            )
+        )
+    )
+)
