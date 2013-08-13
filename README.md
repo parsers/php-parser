@@ -1,3 +1,5 @@
+Master: [![Build Status](https://secure.travis-ci.org/parsers/php-parser.png?branch=master)](http://travis-ci.org/parsers/php-parser)
+
 PHP Parser
 ==========
 
