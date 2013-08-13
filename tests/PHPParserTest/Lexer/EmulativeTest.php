@@ -76,43 +76,6 @@ class EmulativeTest extends \PHPUnit_Framework_TestCase
     	}
     	$this->assertEquals(0, $this->lexer->getNextToken());
     }
-    
-    public function testLeaveStuffAloneInStrings1() {
-    	
-    	$code = '0b1010110';
-    	//$text = array(
-          //      array(Parser::T_LNUMBER, '0b1010110'),
-            //);
-    	
-    	$stringifiedToken = '"' . addcslashes($code, '"\\') . '"';
-    
-    	$this->assertEquals(
-    			array(
-    					array(
-    							Parser::T_DOC_COMMENT,
-    							'<?php ',
-    							1
-    					),
-    					array(
-    							Parser::T_CONSTANT_ENCAPSED_STRING,
-    							'"0b1010110"',
-    							1
-    					)
-    			),
-    			@token_get_all('<?php ' . $stringifiedToken)
-    	);
-    
-    	$this->lexer->startLexing('<?php ' . $stringifiedToken);
-    
-    	$tokenObj = $this->lexer->getNextToken($text);
-    	
-    	$this->assertEquals(Parser::T_CONSTANT_ENCAPSED_STRING, $tokenObj);
-    	
-    	
-    	
-    	$this->assertEquals($stringifiedToken, $text);
-    	$this->assertEquals(0, $this->lexer->getNextToken());
-    }
 
     /**
      * @dataProvider provideTestLexNewFeatures
