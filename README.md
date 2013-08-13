@@ -3,10 +3,14 @@ PHP Parser
 
 This is a PHP parser written in PHP. It's purpose is to simplify static code analysis and manipulation.
 
-It is based on the famous nickic/PHP-Parser project.
+It is based on the [nikic/PHP-Parser][0] project written by [Nikita Popov][1].
 
-* parsers/php-parser usee namespaces (PSR-0), nickic/PHP-Parser dosen't.
-* parsers/php-parser dosen't support PHP 5.2 nickic/PHP-Parser does.
+* parsers/php-parser uses namespaces (PSR-0), nikic/PHP-Parser doesn't.
+* parsers/php-parser doesn't support PHP 5.2 nikic/PHP-Parser does.
+
+Requirements
+------------
+PHP: 5.3 or 5.4
 
 In a Nutshell
 -------------
@@ -72,3 +76,6 @@ programming errors or security issues).
 
 Additionally, you can convert a syntax tree back to PHP code. This allows you to do code preprocessing
 (like automatedly porting code to older PHP versions).
+
+ [0]: https://github.com/nikic/PHP-Parser
+ [1]: https://github.com/nikic
