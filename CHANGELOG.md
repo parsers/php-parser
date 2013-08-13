@@ -1,6 +1,6 @@
 1.0.1
 -----
-* Removing support for PHP 5.3.
+* Removing support for PHP 5.5.
 
 1.0.0
 -----
