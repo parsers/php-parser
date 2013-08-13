@@ -42,45 +42,6 @@ class LexerTest extends \PHPUnit_Framework_TestCase
             array('<?php ' . "\0", 'Unexpected null byte on unknown line'),
         );
     }
-    
-    public function testAll() {
-    	
-    	$code = '
-    	<?php?>
-    	<? ?><?=$a?><?php ?> <?php
-    	
-    	/**
-    	 * namespace desc
-    	 */
-    	 
-    	namespace Foo\Bar;
-    	
-    	class Test {
-    	
-    	}
-    	
-    	';
-    	
-    	$this->lexer->startLexing($code);
-    	
-    	$this->lexer->next();
-    	$token = $this->lexer->current();
-    	$this->assertEquals(0, $this->lexer->key());
-    	$this->assertEquals(array('T_INLINE_HTML',  "\n    	", 1), $token);
-    	
-    	$this->lexer->next();
-    	$token = $this->lexer->current();
-    	$this->assertEquals(1, $this->lexer->key());
-    	$this->assertEquals(array('T_OPEN_TAG',  "<?", 2), $token);
-    	
-    	$this->lexer->next();
-    	$token = $this->lexer->current();
-    	$this->assertEquals(2, $this->lexer->key());
-    	$this->assertEquals(array('T_STRING',  "php", 2), $token);
-    		
-    	
-    	
-    }
 
     /**
      * @dataProvider provideTestLex
