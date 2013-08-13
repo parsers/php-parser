@@ -4,6 +4,7 @@ PHP Parser
 This is a PHP parser written in PHP. It's purpose is to simplify static code analysis and manipulation.
 
 It is based on the [nikic/PHP-Parser][0] project written by [Nikita Popov][1].
+Namespaces structure is inspired from ZendFramework2.
 
 * parsers/php-parser uses namespaces (PSR-0), nikic/PHP-Parser doesn't.
 * parsers/php-parser doesn't support PHP 5.2 nikic/PHP-Parser does.
