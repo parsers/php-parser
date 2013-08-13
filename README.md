@@ -1,10 +1,12 @@
 PHP Parser
 ==========
 
-This is a PHP 5.4 parser written in PHP. It's purpose is to simplify static code analysis and
-manipulation.
+This is a PHP parser written in PHP. It's purpose is to simplify static code analysis and manipulation.
 
-It is based on the famous nickic/PHP-Parser project
+It is based on the famous nickic/PHP-Parser project.
+
+* parsers/php-parser usee namespaces (PSR-0), nickic/PHP-Parser dosen't.
+* parsers/php-parser dosen't support PHP 5.2 nickic/PHP-Parser does.
 
 In a Nutshell
 -------------
